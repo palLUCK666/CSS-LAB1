@@ -6,100 +6,122 @@
     <link rel="stylesheet" href="pathofCSS">
     <title>PART B CSS</title>
     <style>
-        img{
+        img {
             height: 70px;
             width: 70px;
         }
-        .header{
+        .header {
             background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
         }
-        .mainData{
+        .header img {
+            height: 70px;
+            width: auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            
+        }
+       
+        .mainData {
             background-color: white;
             border: 1px dotted black;
             width: 75%;
             float: left;
             padding: 2%;
         }
-        .content{
-           
+        .content {
             width: 100%;
-            height: 45vh;
+            display: flex;
+            flex-wrap: wrap;
         }
-        .aside{
+        .aside {
             background-color: red;
             color: rgb(5, 5, 79);
             width: 15%;
             text-align: center;
             float: left;
-
+            padding: 10px;
         }
-        .dataBox{
+        .dataBox {
             float: left;
             text-align: left;
+            margin: 30px;
         }
-        .footer{
+        .footer {
             background-color: blue;
             color: white;
             text-align: center;
             width: 100%;
-            /* height: 40px; */
-            font-size:xx-large;
-           
+            font-size: xx-large;
+            padding: 10px;
+        }
+        .row1, .row2 {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
-        .row1{
-            width: 100%;
-            float: left;
+        @media screen and (max-width: 480px) {
+            .header {
+               
+                display: flex;
+            }
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+            .aside {
+                width: 100%;
+                padding: 5px;
+            }
+            .mainData {
+                width: 100%;
+                padding: 10px;
+            }
+            .dataBox img {
+                height: 50px;
+                width: 50px;
+                
+            }
+            .footer {
+                font-size: medium;
+                padding: 5px;
+            }
         }
     </style>
 </head>
 <body>
-   
     <div class="main">
-
         <div class="header">
-            <div style="float: right; width: 50%; text-align: end;">
+            <img src="https://media.wired.com/photos/59265fd2af95806129f4f397/master/w_2560%2Cc_limit/MicrosoftVista-4x3.jpg" alt="">
+            <div class="nav-links">
                 <a href="">Home</a>
                 <a href="">About</a>
                 <a href="">Contact</a>
                 <a href="">Login</a>
             </div>
-            <div style="width: 49%;">
-                <img src="https://media.wired.com/photos/59265fd2af95806129f4f397/master/w_2560%2Cc_limit/MicrosoftVista-4x3.jpg" alt="">
-            </div>
+            
         </div>
-<!-- 
-        <hr> -->
 
         <div class="content">
             <div class="aside">
-                <div>
-                    <p>Sidebar</p>
-                </div>
+                <p>Sidebar</p>
                 <hr>
-                <div>
-                    <p>Home</p>
-                </div>
+                <p>Home</p>
                 <hr>
-                <div>
-                    <p>Placement</p>
-                </div>
+                <p>Placement</p>
                 <hr>
-                <div>
-                    <p>Recruitment</p>
-                </div>
+                <p>Recruitment</p>
                 <hr>
-                <div>
-                    <p>Faculty</p>
-                </div>
+                <p>Faculty</p>
                 <hr>
-                <div>
-                    <p>News</p>
-                </div>
-                <hr>
-                <div>
-                    <p></p>
-                </div>
+                <p>News</p>
             </div>
 
             <div class="mainData">
@@ -115,7 +137,7 @@
                         BE,ME
                     </div>
                 </div>
-                
+
                 <div class="row2">
                     <div class="dataBox">
                         <img src="https://images2.alphacoders.com/124/1245878.jpg" alt=""> <br>
@@ -128,22 +150,11 @@
                         Firoz Shreyasiya <br>
                         BE,ME
                     </div>
-                    <div class="dataBox">
-                        <img src="https://4kwallpapers.com/images/wallpapers/windows-11-minimal-windows-logo-5k-8k-7680x4320-7381.png" alt=""> <br>
-                        Shyam Kantesariya <br>
-                        Tata Consultancy Servicew <br>
-                        3.2 Lac
-                    </div>
-                    <div class="dataBox">
-                        <img src="https://c4.wallpaperflare.com/wallpaper/850/221/294/windows-10-abstract-landscape-hd-wallpaper-preview.jpg" alt=""> <br>
-                        Jeet Dhamecha <br>
-                        Reliance Industry LTD <br>
-                        5.0 Lac
-                    </div>
+                   
                     <div class="dataBox">
                         <img src="https://c4.wallpaperflare.com/wallpaper/448/119/665/windows-10-macos-colorful-hd-wallpaper-preview.jpg" alt=""> <br>
                         Harsh Maniar <br>
-                        Reliance Industry LTD <br>
+                        Reliance Industry <br> LTD <br>
                         5.0 Lac
                     </div>
                     <div class="dataBox">
@@ -152,19 +163,23 @@
                         BSNL <br>
                         5.5 Lac
                     </div>
-
+                    <div class="dataBox">
+                        <img src="https://4kwallpapers.com/images/wallpapers/windows-11-minimal-windows-logo-5k-8k-7680x4320-7381.png" alt=""> <br>
+                        Shyam Kantesariya <br>
+                        Tata Consultancy <br> Services <br>
+                        3.2 Lac
+                    </div>
+                    <div class="dataBox">
+                        <img src="https://c4.wallpaperflare.com/wallpaper/850/221/294/windows-10-abstract-landscape-hd-wallpaper-preview.jpg" alt=""> <br>
+                        Jeet Dhamecha <br>
+                        Reliance Industry <br> LTD <br>
+                        5.0 Lac
+                    </div>
                 </div>
-
             </div>
-
         </div>
 
-        <div class="footer"> &copy;Darshan University-Rajkot </div>    
-
+        <div class="footer"> &copy; Darshan University-Rajkot </div>
     </div>
-
-    
-    
-    
 </body>
 </html>
